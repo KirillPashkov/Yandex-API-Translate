@@ -1152,7 +1152,7 @@ BwABPgMAASgDAAGIAwABGgMAAQEBAAEBBQABCAECFgAD//8A/wALAAs='))
 #endregion Source: MainForm.psf
 
 #region Source: Globals.ps1
-	$script:ApplicationVersion = '1.0.0.8'
+	$script:ApplicationVersion = Get-ItemProperty $([System.Windows.Forms.Application]::ExecutablePath) | Select -ExpandProperty VersionInfo | Select -ExpandProperty FileVersion
 	
 	$UpdateServer = 'wgo-it000000601'
 	$UpdatePage = '/software/yandex_translate'
